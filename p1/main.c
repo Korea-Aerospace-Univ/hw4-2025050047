@@ -10,9 +10,9 @@ int main(void) {
         
         if (answer > input) printf("%d<?\n", input);
         else if (answer < input) printf("%d>?\n", input);
-        else printf("%d==?\n%d", input, try1);
-        
+        else printf("%d==?\n", input);
     } while (answer != input);
-
+    printf("%d", try1);
+    
     return 0;
 }
