@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int n = 0;
     int lowerCaseCountMax = 0, numericCountMax = 0;
     int lowerCaseCountTemp = 0, numericCountTemp = 0;
@@ -28,4 +28,5 @@ int main() {
         if (lowerCaseCountTemp >= lowerCaseCountMax) lowerCaseCountMax = lowerCaseCountTemp;
     }
     printf("%d\n%d", lowerCaseCountMax, numericCountMax);
+    return 0;
 }
