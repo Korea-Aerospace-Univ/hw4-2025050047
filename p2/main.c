@@ -15,17 +15,20 @@ int main(void) {
         if ('a' <= a && a <= 'z') {
             lowerCaseCountTemp++;
             numericCountTemp = 0;
+
+            if (lowerCaseCountTemp > lowerCaseCountMax) lowerCaseCountMax = lowerCaseCountTemp;
         }
         else if ('0' <= a && a <= '9') {
             numericCountTemp++;
             lowerCaseCountTemp = 0;
+
+            if (numericCountTemp > numericCountMax) numericCountMax = numericCountTemp;
         }
         else {
             lowerCaseCountTemp = 0;
             numericCountTemp = 0;
         }
-        if (numericCountTemp >= numericCountMax) numericCountMax = numericCountTemp;
-        if (lowerCaseCountTemp >= lowerCaseCountMax) lowerCaseCountMax = lowerCaseCountTemp;
+    
     }
     printf("%d\n%d", lowerCaseCountMax, numericCountMax);
     return 0;
