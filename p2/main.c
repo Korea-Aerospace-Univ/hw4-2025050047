@@ -14,17 +14,17 @@ int main() {
 
         if ('a' <= a && a <= 'z') {
             lowerCaseCountTemp++;
-            //만약 직전까지 숫자를 세고 있었고, 그게 최댓값보다 작지 않다면
+            //만약 직전까지 숫자를 세고 있었다면
             if (numericCountTemp > 0) { 
-                if (numericCountTemp >= numericCountMax) numericCountMax = numericCountTemp;
+                if (numericCountTemp >= numericCountMax) numericCountMax = numericCountTemp; //최댓값 업데이트
                 numericCountTemp = 0;
             }
         }
         else if ('0' <= a && a <= '9') {
             numericCountTemp++;
-            //만약 직전까지 로마자를 세고 있었고, 그게 최댓값보다 작지 않다면
+            //만약 직전까지 로마자를 세고 있었다면
             if (lowerCaseCountTemp > 0) { 
-                if (lowerCaseCountTemp >= lowerCaseCountMax) lowerCaseCountMax = lowerCaseCountTemp;
+                if (lowerCaseCountTemp >= lowerCaseCountMax) lowerCaseCountMax = lowerCaseCountTemp; //최댓값 업데이트
                 lowerCaseCountTemp = 0;
             }
         }
